@@ -1,0 +1,191 @@
+body {
+    background-color: rgb(18, 18, 31);
+    color: rgb(234, 234, 245);
+    font-family: Verdana, Geneva, sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 212, 255);
+    font-size: 40px;
+    text-shadow: 3px 3px rgb(124, 77, 255);
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(0, 212, 255);
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 100%;
+    max-width: 90px;
+    height: auto;
+    border-radius: 20px;
+}
+
+h2 {
+    color: rgb(0, 212, 255);
+}
+
+/* ---------- MENU ---------- */
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(124, 77, 255);
+    border-radius: 25px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+#textoMenu {
+    font-size: large;
+    color: rgb(0, 212, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#botao1, #botao2, #botao3 {
+    background-color: rgb(124, 77, 255);
+    color: white;
+    border-radius: 25px;
+    max-height: 40px;
+}
+
+#botao1:hover, #botao2:hover, #botao3:hover {
+    background-color: rgb(0, 212, 255);
+    color: rgb(18, 18, 31);
+}
+
+/* ---------- CORPO ---------- */
+main {
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(0, 212, 255);
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#infoprinci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#controle {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#explicativo {
+    font-size: 18px;
+}
+
+/* cards coloridos */
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card {
+    width: 100%;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#card1 { background-color: rgb(124, 77, 255); }
+#card2 { background-color: rgb(98, 62, 204); }
+#card3 { background-color: rgb(75, 48, 160); }
+#card4 { background-color: rgb(55, 36, 120); }
+
+.card:hover {
+    background-color: rgb(0, 212, 255);
+    color: rgb(18, 18, 31);
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(0, 212, 255);
+    border-radius: 25px;
+    text-align: center;
+}
+
+footer h3 {
+    color: rgb(0, 212, 255);
+}
+
+a {
+    color: rgb(0, 212, 255);
+}
+
+a:hover {
+    color: white;
+}
+
+/* ---------- TABLET ---------- */
+@media screen and (max-width: 768px) {
+    body {
+        text-align: center;       /* centraliza os textos */
+    }
+    h1 {
+        font-size: 24px;          /* diminui as fontes */
+    }
+    h2 {
+        font-size: medium;
+    }
+    #explicativo {
+        font-size: 14px;
+        order: 1;                 /* texto primeiro */
+    }
+    #controle {
+        order: 2;                 /* imagem abaixo do texto */
+    }
+    #infoprinci {
+        flex-direction: column;
+    }
+    #menu {
+        font-size: small;
+    }
+    #cards {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 45%;
+        font-size: 14px;
+    }
+}
+
+/* ---------- CELULAR ---------- */
+@media screen and (max-width: 480px) {
+    #logo {
+        max-width: 50px;          /* logo menor */
+    }
+    #info1, #info2 {
+        display: none;            /* remove Informação 1 e 2 */
+    }
+    header {
+        justify-content: center;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
