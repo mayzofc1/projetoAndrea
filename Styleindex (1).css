@@ -2,7 +2,7 @@ body {
     background-color: rgb(18, 18, 31);
     color: rgb(234, 234, 245);
     font-family: Verdana, Geneva, sans-serif;
-    
+    text-align: center;
 }
 
 h1 {
@@ -119,6 +119,124 @@ main {
     color: rgb(18, 18, 31);
 }
 
+/* ---------- DESTAQUES ---------- */
+.destaques {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(124, 77, 255);
+    border-radius: 25px;
+}
+
+.destaques > h2 {
+    margin-top: 0;
+}
+
+.destaques-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.destaque {
+    padding: 20px;
+    background-color: rgb(43, 43, 75);
+    border: 1px solid rgb(124, 77, 255);
+    border-radius: 15px;
+}
+
+.destaque-icone {
+    display: block;
+    font-size: 36px;
+}
+
+.destaque h3 {
+    color: rgb(0, 212, 255);
+}
+
+.destaque p {
+    line-height: 1.6;
+}
+
+/* ---------- CHAMADA PARA AÇÃO ---------- */
+.chamada-acao {
+    margin-bottom: 10px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, rgb(75, 48, 160), rgb(30, 30, 53));
+    border: 3px solid rgb(0, 212, 255);
+    border-radius: 25px;
+}
+
+.chamada-acao h2 {
+    margin-top: 0;
+}
+
+.chamada-acao p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.botao-contato {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(0, 212, 255);
+    border-radius: 25px;
+    color: rgb(18, 18, 31);
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao-contato:hover {
+    background-color: white;
+    color: rgb(18, 18, 31);
+    transform: translateY(-2px);
+}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.localizacao {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: rgb(30, 30, 53);
+    border: 3px solid rgb(0, 212, 255);
+    border-radius: 25px;
+}
+
+.localizacao > h2 {
+    margin-top: 0;
+}
+
+.localizacao-conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    text-align: left;
+}
+
+.localizacao-mapa iframe {
+    display: block;
+    width: 100%;
+    min-height: 280px;
+    height: 100%;
+    border: 0;
+    border-radius: 15px;
+}
+
+.localizacao-endereco {
+    padding: 20px;
+    background-color: rgb(43, 43, 75);
+    border: 1px solid rgb(124, 77, 255);
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+.localizacao-endereco h3 {
+    margin-top: 0;
+    color: rgb(0, 212, 255);
+}
+
 /* ---------- RODAPÉ ---------- */
 footer {
     display: flex;
@@ -168,6 +286,16 @@ a:hover {
     #cards {
         flex-wrap: wrap;
     }
+    .destaques-lista {
+        grid-template-columns: 1fr;
+    }
+    .localizacao-conteudo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .localizacao-mapa iframe {
+        min-height: 240px;
+    }
     .card {
         width: 45%;
         font-size: 14px;
@@ -177,15 +305,37 @@ a:hover {
 /* ---------- CELULAR ---------- */
 @media screen and (max-width: 480px) {
     #logo {
-        max-width: 50px;          /* logo menor */
+        max-width: 50px;          /* menor */
     }
     #info1, #info2 {
-        display: none;            /* remove Informação 1 e 2 */
+        display: none;            /* remove  1 e 2 */
     }
     header {
         justify-content: center;
     }
     footer {
         flex-direction: column;
+    }
+    .destaques, .chamada-acao {
+        padding: 20px 15px;
+    }
+    .localizacao {
+        padding: 20px 15px;
+    }
+    .localizacao-endereco {
+        padding: 16px;
+        font-size: 14px;
+    }
+    .destaque {
+        padding: 16px;
+    }
+    .chamada-acao h2 {
+        font-size: 20px;
+    }
+    .chamada-acao p {
+        font-size: 14px;
+    }
+    .botao-contato {
+        padding: 11px 20px;
     }
 }
